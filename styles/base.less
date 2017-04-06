@@ -98,18 +98,6 @@ atom-text-editor .search-results .marker.current-result .region {
 
 .syntax--constant {
   color: @green;
-
-  &.syntax--character.syntax--escape {
-    color: @cyan;
-  }
-
-  &.syntax--numeric {
-    color: @orange;
-  }
-
-  &.syntax--other.syntax--color {
-    color: @cyan;
-  }
 }
 
 // String interpolation in Ruby, CoffeeScript, and others
@@ -128,26 +116,8 @@ atom-text-editor .search-results .marker.current-result .region {
   }
 }
 
-.syntax--invalid.syntax--illegal {
-  background-color: @red;
-  color: @syntax-background-color;
-}
-
 .syntax--string {
-  color: @green;
-
-
-  &.syntax--regexp {
-    color: @cyan;
-
-    .syntax--source.syntax--ruby.syntax--embedded {
-      color: @orange;
-    }
-  }
-
-  &.syntax--other.syntax--link {
-    color: @red;
-  }
+  color: @blue;
 }
 
 .syntax--punctuation {
@@ -178,11 +148,6 @@ atom-text-editor .search-results .marker.current-result .region {
       font-style: italic;
     }
   }
-
-  &.syntax--section.syntax--embedded {
-    color: darken(@red, 10%);
-  }
-
 }
 
 .syntax--storage {
@@ -202,11 +167,6 @@ atom-text-editor .search-results .marker.current-result .region {
 
   &.syntax--name.syntax--section {
     color: @blue;
-  }
-
-  &.syntax--name.syntax--tag {
-    color: @red;
-    text-decoration: underline;
   }
 
   &.syntax--other.syntax--attribute-name {
@@ -254,10 +214,6 @@ atom-text-editor .search-results .marker.current-result .region {
     color: @purple;
   }
 
-  &.syntax--deleted {
-    color: @red;
-  }
-
   &.syntax--italic {
     color: @purple;
     font-style: italic;
@@ -269,10 +225,6 @@ atom-text-editor .search-results .marker.current-result .region {
 
   &.syntax--inserted {
     color: @green;
-  }
-
-  &.syntax--list {
-    color: @red;
   }
 
   &.syntax--quote {
