@@ -22,5 +22,15 @@ module AtomColors
 
       %w[One Two Three].each { |number| puts number }
     end
+
+    private
+
+    def heredoc_example
+      <<-SQL
+        SELECT *
+        FROM colorschemes
+        WHERE background = 'dark'
+      SQL
+    end
   end
 end
