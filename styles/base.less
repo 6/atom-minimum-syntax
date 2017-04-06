@@ -191,19 +191,14 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .syntax--entity {
-  &.syntax--name.syntax--function {
-    color: @blue;
-  }
-  &.syntax--name.syntax--type {
+  &.syntax--name.syntax--function,
+  &.syntax--name.syntax--type,
+  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
     color: @light-orange;
-    text-decoration: underline;
   }
 
   &.syntax--other.syntax--inherited-class {
     color: @green;
-  }
-  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @light-orange;
   }
 
   &.syntax--name.syntax--section {
