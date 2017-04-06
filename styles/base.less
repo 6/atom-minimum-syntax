@@ -79,7 +79,7 @@ atom-text-editor .search-results .marker.current-result .region {
   }
 
   &.syntax--other.syntax--special-method {
-    color: @blue;
+    color: @purple;
   }
 
   &.syntax--other.syntax--unit {
@@ -88,7 +88,7 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .syntax--constant {
-  color: @orange;
+  color: @green;
 
   &.syntax--character.syntax--escape {
     color: @cyan;
@@ -101,21 +101,21 @@ atom-text-editor .search-results .marker.current-result .region {
   &.syntax--other.syntax--color {
     color: @cyan;
   }
-
-  &.syntax--other.syntax--symbol {
-    color: @green;
-  }
 }
 
-.syntax--variable {
-  color: @red;
-
-  &.syntax--interpolation {
-    color: darken(@red, 10%);
+// String interpolation in Ruby, CoffeeScript, and others
+.syntax--string {
+  .syntax--source,
+  .syntax--meta.syntax--embedded.syntax--line {
+    color: @syntax-foreground-color;
   }
 
-  &.syntax--parameter.syntax--function {
-    color: @syntax-text-color;
+  .syntax--punctuation.syntax--section.syntax--embedded {
+    color: @purple;
+
+    .syntax--source {
+      color: @purple;  // Required for the end of embedded strings in Ruby
+    }
   }
 }
 
@@ -174,20 +174,6 @@ atom-text-editor .search-results .marker.current-result .region {
     color: darken(@red, 10%);
   }
 
-}
-
-.syntax--support {
-  &.syntax--class {
-    color: @light-orange;
-  }
-
-  &.syntax--function  {
-    color: @cyan;
-
-    &.syntax--any-method {
-      color: @blue;
-    }
-  }
 }
 
 .syntax--entity {
