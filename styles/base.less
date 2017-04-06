@@ -35,7 +35,7 @@ atom-text-editor {
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @light-gray;
+    color: @syntax-text-color;
   }
 
   .invisible {
@@ -64,7 +64,7 @@ atom-text-editor .search-results .marker.current-result .region {
 // Syntax styles
 
 .syntax--comment {
-  color: @light-gray;
+  color: @syntax-text-color;
 }
 
 .syntax--keyword {
@@ -148,7 +148,7 @@ atom-text-editor .search-results .marker.current-result .region {
 .syntax--punctuation {
   &.syntax--definition {
     &.syntax--comment {
-      color: @light-gray;
+      color: @syntax-text-color;
     }
 
     &.syntax--string,
@@ -246,7 +246,6 @@ atom-text-editor .search-results .marker.current-result .region {
   }
 
   &.syntax--separator {
-    background-color: @gray;
     color: @syntax-text-color;
   }
 }
