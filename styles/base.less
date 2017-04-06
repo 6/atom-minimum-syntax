@@ -77,10 +77,11 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .syntax--keyword {
-  color: @purple;
+  font-weight: bold;
+  color: @color-dark-muted;
 
   &.syntax--control {
-    color: @purple;
+    color: @color-dark-muted;
   }
 
   &.syntax--operator {
@@ -88,12 +89,8 @@ atom-text-editor .search-results .marker.current-result .region {
   }
 
   &.syntax--other.syntax--special-method {
-    color: @purple;
+    color: @color-dark-muted;
   }
-}
-
-.syntax--constant {
-  color: @green;
 }
 
 // String interpolation in Ruby, CoffeeScript, and others
@@ -104,16 +101,16 @@ atom-text-editor .search-results .marker.current-result .region {
   }
 
   .syntax--punctuation.syntax--section.syntax--embedded {
-    color: @purple;
+    color: @color-dark-muted;
 
     .syntax--source {
-      color: @purple;  // Required for the end of embedded strings in Ruby
+      color: @color-dark-muted;  // Required for the end of embedded strings in Ruby
     }
   }
 }
 
 .syntax--string {
-  color: @blue;
+  color: @color-muted;
 }
 
 .syntax--punctuation {
@@ -131,65 +128,64 @@ atom-text-editor .search-results .marker.current-result .region {
 
     &.syntax--heading,
     &.syntax--identity {
-      color: @blue;
+      color: @color-muted;
     }
 
     &.syntax--bold {
-      color: @light-orange;
+      color: @color-dark-vibrant;
       font-weight: bold;
     }
 
     &.syntax--italic {
-      color: @purple;
+      color: @color-dark-muted;
       font-style: italic;
     }
   }
 }
 
 .syntax--storage {
-  color: @purple;
+  color: @color-dark-muted;
 }
 
 .syntax--entity {
   &.syntax--name.syntax--function,
+  &.syntax--name.syntax--class,
+  &.syntax--other.syntax--inherited-class,
   &.syntax--name.syntax--type,
-  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class,
+  &.syntax--name.syntax--type.syntax--class,
   &.syntax--other.syntax--attribute-name {
-    color: @light-orange;
+    color: @color-dark-vibrant;
   }
 
-  &.syntax--other.syntax--inherited-class {
-    color: @green;
-  }
-
-  &.syntax--name.syntax--section {
-    color: @blue;
+  &.syntax--other.syntax--attribute-name {
+    font-weight: bold;
   }
 }
 
 .syntax--support {
   &.syntax--class,
-  &.syntax--object {
-    color: @light-orange;
-  }
-
+  &.syntax--object,
   &.syntax--function,
   &.syntax--property-name {
-    color: @green;
+    color: @color-dark-vibrant;
+  }
+
+  &.syntax--property-name {
+    font-weight: bold;
   }
 }
 
 .syntax--meta {
   &.syntax--class {
-    color: @light-orange;
+    color: @color-dark-vibrant;
   }
 
   &.syntax--require {
-    color: @blue;
+    color: @color-muted;
   }
 
   &.syntax--selector {
-    color: @purple;
+    color: @color-dark-muted;
   }
 
   &.syntax--separator {
@@ -207,34 +203,18 @@ atom-text-editor .search-results .marker.current-result .region {
   }
 
   &.syntax--changed {
-    color: @purple;
+    color: @color-dark-muted;
   }
 
   &.syntax--italic {
-    color: @purple;
+    color: @color-dark-muted;
     font-style: italic;
   }
 
   &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
-    color: @blue;
-  }
-
-  &.syntax--inserted {
-    color: @green;
-  }
-
-  &.syntax--raw.syntax--inline {
-    color: @green;
+    color: @color-muted;
   }
 }
-
-.syntax--source.syntax--gfm .syntax--markup {
-  -webkit-font-smoothing: auto;
-  &.syntax--heading {
-    color: @green;
-  }
-}
-
 
 // Mini editor
 
